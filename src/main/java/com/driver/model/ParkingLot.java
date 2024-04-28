@@ -1,5 +1,7 @@
 package com.driver.model;
 
+import net.minidev.json.annotate.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -13,6 +15,7 @@ public class ParkingLot {
     private String address;
 
     @OneToMany(mappedBy = "parkingLot",cascade = CascadeType.ALL)
+
     List<Spot> spotList;
 
     public int getId() {
